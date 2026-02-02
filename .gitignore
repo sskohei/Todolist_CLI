@@ -1,0 +1,34 @@
+# ===== Node.js =====
+node_modules/
+
+# ===== TypeScript =====
+dist/
+*.tsbuildinfo
+
+# ===== Logs =====
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===== Environment =====
+.env
+.env.local
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Editor =====
+.vscode/
+.idea/
+
+# ===== CLI data =====
+todo.json
+.todo-cli.json
+
+# Tests
+coverage/
+
+# npm
+.npmrc

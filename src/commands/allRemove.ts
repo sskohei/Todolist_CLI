@@ -5,7 +5,7 @@ export function allRemoveCommand(program:Command){
     program
         .command("allrm")
         .description("remove all todos")
-        .action((id) => {
+        .action(() => {
             let todos = loadTodos()
             todos = []
             saveTodos(todos)

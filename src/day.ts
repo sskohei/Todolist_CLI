@@ -1,5 +1,4 @@
 export type Day = {
-    id: number,
     year: number,
     month: number,
     date: number,

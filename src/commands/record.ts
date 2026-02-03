@@ -23,7 +23,6 @@ export function recordCommand(program: Command){
                 achieve_rate = achieve_number / tasks_number
             }
             const newDay:Day = {
-                id: days.length + 1,
                 year: y,
                 month:m,
                 date:day,

@@ -7,6 +7,7 @@ import { doneCommand } from "./commands/done.js"
 import { removeCommand } from "./commands/remove.js"
 import { allRemoveCommand } from "./commands/allRemove.js"
 import { recordCommand } from "./commands/record.js"
+import { logCommand } from "./commands/log.js"
 
 const program = new Command()
 
@@ -21,5 +22,6 @@ doneCommand(program)
 removeCommand(program)
 allRemoveCommand(program)
 recordCommand(program)
+logCommand(program)
 
 program.parse(process.argv)

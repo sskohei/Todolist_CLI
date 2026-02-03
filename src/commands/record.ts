@@ -1,5 +1,5 @@
 import { Command} from "commander";
-import { loadTodos,saveTodos } from "../storage.js";
+import { loadTodos} from "../storage.js";
 import { loadDays,saveDays } from "../day_storage.js";
 import type { Day } from "../day.js";
 
@@ -8,6 +8,11 @@ export function recordCommand(program: Command){
         .command("record")
         .description("record achivement rate")
         .action(() => {
+            let d = new Date()
+            let y = d.getFullYear()
+            let m = d.getMonth() + 1
+            let day = d.getDate()
+
             const todos = loadTodos()
             let days = loadDays()
             const tasks_number = todos.length
@@ -19,6 +24,9 @@ export function recordCommand(program: Command){
             }
             const newDay:Day = {
                 id: days.length + 1,
+                year: y,
+                month:m,
+                date:day,
                 achievement: achieve_number,
                 tasks: tasks_number,
                 rate: achieve_rate
